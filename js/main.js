@@ -10,7 +10,7 @@ const randomNumber = (min, max) => {
   }
 };
 
-let a = randomNumber(0, 500);
+randomNumber(0, 500);
 
 const cutString = (text, maxLength) => {
   return text.length <= maxLength ? true : false;
