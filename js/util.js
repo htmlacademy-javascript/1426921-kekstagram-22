@@ -10,12 +10,9 @@ const randomNumber = (min, max) => {
   }
 };
 
-randomNumber;
-
 const cutString = (text, maxLength) => {
   return text.length <= maxLength ? true : false;
 };
 
-cutString;
-
 export {randomNumber};
+export {cutString};
