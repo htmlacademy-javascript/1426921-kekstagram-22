@@ -1,4 +1,4 @@
-import {randomNumber} from './util';
+import {randomNumber} from './util.js';
 const photoCount = 25;
 
 let comm = [
@@ -56,3 +56,5 @@ const addPhotos = () => {
 };
 
 addPhotos();
+
+export default list_of_obj;
