@@ -9,7 +9,6 @@ const renderPhoto = (picture) => {
   pictureElement.querySelector('img').src = picture.url;
   pictureElement.querySelector('.picture__comments').textContent = picture.comments.length;
   pictureElement.querySelector('.picture__likes').textContent = picture.likes;
-  pictureElement.querySelector('.social__caption').textContent = picture.description;
 
   pictureElement.addEventListener('click', (evt) => {
     evt.preventDefault();
