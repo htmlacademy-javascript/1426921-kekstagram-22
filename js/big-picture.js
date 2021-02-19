@@ -39,6 +39,7 @@ const renderComments = (comments) => {
 const showBigPicture = (picture) => {
   bigPicture.querySelector('.big-picture__img > img').src = picture.url;
   bigPicture.querySelector('.social__caption').textContent = picture.description;
+  bigPicture.querySelector('.likes-count').textContent = picture.likes;
 
   renderComments(picture.comments);
 
