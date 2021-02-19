@@ -1,13 +1,20 @@
 import photos from './data.js';
+import showBigPicture from './big-picture.js';
 
 const pictures = document.querySelector('.pictures');
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
-const renderPhoto = ({url, comments, likes}) => {
+const renderPhoto = (picture) => {
   const pictureElement = pictureTemplate.cloneNode(true);
-  pictureElement.querySelector('img').src = url;
-  pictureElement.querySelector('.picture__comments').textContent = comments.length;
-  pictureElement.querySelector('.picture__likes').textContent = likes;
+  pictureElement.querySelector('img').src = picture.url;
+  pictureElement.querySelector('.picture__comments').textContent = picture.comments.length;
+  pictureElement.querySelector('.picture__likes').textContent = picture.likes;
+
+  pictureElement.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    showBigPicture(picture);
+  });
 
   return pictureElement;
 };
